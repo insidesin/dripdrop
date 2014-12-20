@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+/* Basic CSS document setup for minimal default effects */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Standard text stylings */
+a:visited { text-decoration:none; }
+a:hover { text-decoration:none; }
+a:active { text-decoration:underline; }
+
+/* Main body divider */
+body {
+	background: #000;
+	color: #474747;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	min-width: 480px;
+}
+body a {
+	color: #333;
+}
+
+/* Used to centre dividers, tables, etc. */
+.centre_container {
+	max-width: 960px;
+	min-width: 480px;
+	margin: 0 auto;
+	overflow: inherit;
+}
+
+/* Header tags, including logo and navigation */
+#header {
+	height: 447px;
+	background-image: url(../images/headerbg.png);
+}
+#logo_image {
+	height: 180px;
+	background-image: url(../images/logo.jpg);
+	background-repeat: no-repeat;
+}
+
+#navigation_bg {
+	height: 240px;
+	background-image: url(../images/header1.jpg);
+	background-size: cover;
+}
+
+/* Nav link functionality for drop-down links */
+/* START: FIRST-TIER navigation list */
+#navigation_bar {
+	height: 35px;
+	background-image: url(../images/spacer.png);
+}
+#navigation_bar_IE {
+	height: 35px;
+	background-color: white;
+}
+#navigation_bar ul {
+	list-style: none;
+}
+/* List items for individual menu buttons. */
+#navigation_bar ul li {
+	height: 35px;
+	text-align: center;
+	float: left;
+}
+/* Text options for menu buttons. */
+#navigation_bar ul li a {
+	padding: 9px 25px 9px 25px;
+	display: block;
+	text-decoration: none;
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	background-color: rgba(255,255,255,0.70);
+}
+#navigation_bar ul li a:hover {
+	background-color: rgba(255,255,255,0.90);
+}
+#navigation_bar ul li + li {
+	background: url(../images/seperator.png) no-repeat top left;
+}
+/* Login form styling for the login box. Javascript display activated */
+#login_form {
+	padding: 15px;
+	display: none;
+	background-color: rgba(255,255,255,0.80);
+    position: absolute;
+}
+#login_form p {
+	padding: 8px;	
+}
+/* END: FIRST-TIER navigation list */
+
+/* START: SECOND-TIER navigation list */
+#navigation_bar li ul {
+    display: none;
+}
+#navigation_bar li:hover ul {
+    display: block;
+    position: absolute;
+}
+#navigation_bar li ul li {
+    float: none;
+	width: 200px;
+	text-align: left;
+}
+#navigation_bar li:hover a {
+	background-color: rgba(255,255,255,0.50); 
+}
+#navigation_bar li:hover li a:hover {
+    background-color: rgba(255,255,255,0.70);
+}
+/* END: SECOND-TIER navigation list */
+
+/* START: MAIN CONTENT */
+#main_content {
+	background: #e1e5e8;
+	overflow: auto;
+}
+/* Alerts for page notifications, such as login success, failure, etc. */
+.alert_success {
+	margin: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #E9F1FE;
+	border: #CCC thin solid;
+}
+.alert_fail {
+	margin: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #FFC6C6;
+	border: #CCC thin solid;
+}
+/* START: LEFT content area */
+.left_content_box {
+	margin: 20px 0 20px 0;
+	width: 25%;
+	float: left;
+	padding: 15px;
+}
+
+/* Side box is the left content area's structural divider */
+.side_box {
+	margin: 10px 0 10px 0;
+	width: 100%;
+	overflow: hidden;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+}
+.side_box p {
+	margin: 10px;
+	padding: 4px;
+}
+/* Hold information on the search box in the side */
+.side_box form {
+	margin: 15px;
+	width: 85%;
+	float: left;
+}
+.hidden_form_option_box {
+	display: none;
+}
+.form_option_box {
+	float: right;
+	width: 60%;
+}
+.search_form {
+	list-style: none;
+}
+.search_form li {
+	padding: 5px;
+}
+.search_button {
+	width: 100px;
+	height: 30px;
+}
+.alert {
+	margin-top: 15px;
+	text-align: center;
+	color: #CD5555;
+}
+#search_alert {
+	margin-top: 15px;
+	text-align: center;
+	color: #CD5555;
+	display: none;
+}
+/* END: LEFT content area */
+
+/* START: RIGHT content area */
+.right_content_box {
+	margin: 3% 1% 3% 1%;
+	width: 60%;
+	float: right;
+	padding: 2% 3% 2% 3%;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+}
+/* Textual styling for all content boxes in right hand */
+.right_content_box h2 {
+	margin-top: 10px;
+}
+.right_content_box h3 {
+	margin-top: 5px;
+}
+.right_content_box p {
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.right_content_box ul {
+	margin-left: 15px;
+}
+.right_content_box li {
+	margin: 6px 0 6px 15px;
+}
+
+/* Registration Form styling */
+.form_caption {
+	display: inline-block;
+    float: left;
+    clear: left;
+    width: 100%;
+    text-align: right;
+	margin-top: 10px;
+}
+.form_data {
+	width: 60%;
+	display: inline-block;
+}
+.required {
+	color: red;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+/* Small Info Box next to item information. */
+#info_box {
+	float: right;
+	margin: 15px;
+	padding: 15px;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+	text-align: center;
+}
+/* Vote image that could be implemented in future to allow UP/DOWN voting */
+.vote_image {
+	width: 70px;
+	height: 70px;
+}
+
+/* Reviews Box below information. */
+#reviews_box {
+	margin-bottom: 20px;
+	margin: auto;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+}
+#review_title {
+	padding: 8px 0 4px 0;
+	text-align: center;
+}
+.review_post {
+	margin: 10px;
+	padding: 20px;
+	border: rgba(0,0,0,0.05) solid thin;
+	background-color: rgba(255,255,255,0.50);
+}
+.review_stars_rating {
+	float: right;
+	font-size: 18px;
+}
+.user_name {
+	display: inline;
+}
+/* Notes are the review's description by users. */
+.rating_notes {
+	font-size: 14px;
+	margin: 15px;
+	margin-bottom: 0px;
+}
+.review_field {
+	width: 75%;
+	margin-bottom: 14px;
+	display: block;
+}
+
+/* Main context in right hand context box */
+.content_post {
+	margin: 10px;
+	margin-top: 15px;
+}
+
+/* Search result styling for individual fields */
+.result_info_title {
+	display: inline;
+}
+.result_info_content {
+	margin-left: 10px;
+	color: #777;
+}
+
+/* Results table for a desired search */
+table#results_table {
+	width: 100%;
+}
+/* ---> Column widths for results table */
+td.name_column {
+	width: 50%;
+}
+td.suburb_column {
+	width: 30%;
+}
+td.rating_column {
+	width: 20%;
+}
+/* ---> Column headers for results table */
+td.name_column_head {
+	font-weight: bold;
+	font-size: 16px;
+	width: 50%;
+}
+td.suburb_column_head {
+	font-weight: bold;
+	font-size: 16px;
+	width: 30%;
+}
+td.rating_column_head {
+	font-weight: bold;
+	font-size: 16px;
+	width: 20%;
+}
+/* END: RIGHT content area */
+
+/* Standard Table layout across website */
+table {
+	border-collapse: collapse;
+	margin: 25px 0 25px 0;
+}
+th {
+	font-size: 0.9em;
+	padding: 5px 0 5px 0;
+	border: 1px solid black;
+}
+td {
+	padding: 0.7em;
+	border: 1px solid black;
+}
+/* END: MAIN CONTENT */
+
+/* START: FOOTER */
+#footer {
+	height: 262px;
+	width: 100%;
+	background-image: url(../images/footerbg.png);
+}
+
+/* Structures all link lists in the footer. */
+#footer_links {
+	height: 230px;
+	padding-left: 100px;
+	color: #FFF;
+	overflow: auto;
+}
+#footer_links h4 {
+	padding-bottom: 5px;
+}
+
+/* Quick nav allows for the page header menu to be used a bit in the footer. */
+#quick_nav {
+	height: 70px;
+	padding-top: 30px;
+}
+#quick_nav ul {
+	list-style: none;
+}
+#quick_nav ul li {
+	width: 20%;
+	float: left;
+	padding: 5px 0; 
+	margin-left: 25px;
+}
+#quick_nav ul a {
+	color: #CCC;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+#quick_nav ul a:hover {
+	text-decoration: underline;
+}
+
+/* Social links are the bottom links on the page, i.e. Facebook, Twitter. */
+#social_links {
+	height: 40px;
+	padding-top: 35px;
+}
+#social_links ul {
+	list-style: none;
+}
+#social_links ul li {
+	width: 14%;
+	float: left;
+	padding: 5px 0; 
+	margin-left: 25px;
+}
+#social_links ul a {
+	color: #CCC;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+#social_links ul a:hover {
+	text-decoration: underline;
+}
+#social_links img {
+	padding-right: 5px;
+}
+#copyright {
+	text-align: center;
+	height: 32px;
+	padding-top: 7px;
+}
+/* END: FOOTER */

@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+/* Basic CSS document setup for minimal default effects */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Standard text stylings */
+a:visited { text-decoration:none; }
+a:hover { text-decoration:none; }
+a:active { text-decoration:underline; }
+
+/* Main body divider */
+body {
+	background: #000;
+	color: #474747;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+body a {
+	color: #333;
+}
+
+/* Used to centre dividers, tables, etc. */
+.centre_container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Header tags, including logo and navigation */
+#header {
+	height: 300px;
+	background-image: url(../images/mobile/headerbg.png);
+	width: 100%;
+}
+#logo_image {
+	height: 120px;
+	background-image: url(../images/mobile/logo.jpg);
+	background-repeat: no-repeat;
+}
+
+/* Nav link functionality for drop-down links */
+/* START: FIRST-TIER navigation list */
+#navigation_bar ul {
+	height: 140px;
+	list-style: none;
+}
+/* List items for individual menu buttons. */
+#navigation_bar ul li {
+	height: 37px;
+	width: 100%;
+	text-align: center;
+}
+/* Text options for menu buttons. */
+#navigation_bar ul li a {
+	padding: 9px 0px 9px 0px;
+	display: block;
+	text-decoration: none;
+	color: #333333;
+	font-size: 1em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	background-color: rgba(244,243,254,0.8)
+}
+#navigation_bar ul li a:hover {
+	background-color: rgba(244,243,254,0.9)
+}
+/* Login form styling for the login box. Javascript display activated */
+#login_form {
+	padding: 4%;
+	display: none;
+	background-color: rgb(244,243,254);
+	border: thin solid #000;
+	margin: auto;
+    position: relative;
+}
+#login_form p {
+	padding: 8px;	
+}
+/* END: FIRST-TIER navigation list */
+
+/* START: SECOND-TIER navigation list */
+#navigation_bar li ul {
+    display: none;
+}
+/* END: SECOND-TIER navigation list */
+
+/* START: MAIN CONTENT */
+#main_content {
+	background: #e1e5e8;
+	width: 100%;
+	overflow: hidden;
+}
+/* Alerts for page notifications, such as login success, failure, etc. */
+.alert_success {
+	margin: auto;
+	text-align: center;
+	padding-top: 6%;
+	padding-bottom: 6%;
+	background-color: #E9F1FE;
+	border: #CCC thin solid;
+}
+.alert_fail {
+	margin: auto;
+	text-align: center;
+	padding-top: 6%;
+	padding-bottom: 6%;
+	background-color: #FFC6C6;
+	border: #CCC thin solid;
+}
+/* START: LEFT content area */
+.left_content_box {
+	margin: 1% 0 1% 0;
+	width: 90%;
+	padding: 4%;
+}
+
+/* Side box is the left content area's structural divider */
+.side_box {
+	margin: 10px 0 10px 0;
+	width: 100%;
+	overflow: auto;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+}
+.side_box p {
+	margin: 10px;
+	padding: 4px;
+}
+/* Hold information on the search box in the side */
+.side_box form {
+	margin: 15px;
+	width: 90%;
+	float: left;
+}
+.hidden_form_option_box {
+	display: none;
+}
+.form_option_box {
+	float: right;
+	width: 70%;
+}
+.search_form {
+	list-style: none;
+}
+.search_form li {
+	padding: 5px;
+}
+.search_button {
+	margin-top: 10px;
+	width: 100%;
+}
+.alert {
+	margin-top: 10px;
+	text-align: center;
+	color: #CD5555;
+}
+#search_alert {
+	margin-top: 15px;
+	text-align: center;
+	color: #CD5555;
+	display: none;
+}
+/* END: LEFT content area */
+
+/* START: RIGHT content area */
+.right_content_box {
+	margin: 3%;
+	padding: 2% 4% 2% 4%;
+	width: 85%;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+	overflow: hidden;
+}
+/* Textual styling for all content boxes in right hand */
+.right_content_box h2 {
+	margin-top: 10px;
+}
+.right_content_box h3 {
+	margin-top: 5px;
+}
+.right_content_box p {
+	line-height: 1.5em;
+	margin-bottom: 15px;
+}
+.right_content_box ul {
+	margin-left: 2%;
+}
+.right_content_box li {
+	margin: 2% 0 2% 3%;
+}
+
+/* Registration Form styling */
+.form_caption {
+	font-size: 0.8em;
+	display: inline-block;
+    float: left;
+    clear: left;
+    width: 100%;
+    text-align: right;
+	margin-top: 3%;
+}
+.form_data {
+	width: 45%;
+	display: inline-block;
+	padding: 1%;
+}
+.required {
+	color: red;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+/* Small Info Box next to item information. */
+#info_box {
+	float: right;
+	margin: 1%;
+	padding: 2%;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+	text-align: center;
+}
+/* Vote image that could be implemented in future to allow UP/DOWN voting */
+.vote_image {
+	border: rgb(102,102,102) solid thin;
+	width: 45%;
+	height: 45%;
+}
+#box_header {
+	font-size: 0.9em;
+}
+#star_rating {
+	margin-bottom: 0px;
+	font-size: 1.1em;
+}
+
+/* Reviews Box below information. */
+#reviews_box {
+	margin: 3%;
+	width: 85%;
+	padding: 2% 4% 2% 4%;
+	border: rgba(0,0,0,0.10) solid thin;
+	background-color: rgba(255,255,255,0.50);
+}
+.review_post {
+	margin: 2%;
+	padding: 3%;
+	border: rgba(0,0,0,0.05) solid thin;
+	background-color: rgba(255,255,255,0.50);
+}
+.review_stars_rating {
+	float: right;
+	font-size: 1em;
+}
+.user_name {
+	display: inline;
+}
+/* Notes are the review's description by users. */
+.rating_notes {
+	font-size: 0.9em;
+	margin: 2%;
+	margin-bottom: 0px;
+}
+
+/* Main content structure for content in right hand context box */
+.content_post {
+	margin-top: 3%;
+}
+
+/* Search result styling for individual fields */
+.result_info_title {
+	display: inline;
+}
+.result_info_content {
+	margin-left: 10px;
+	color: #777;
+}
+
+/* Column widths for results table */
+td.name_column {
+	font-size: 1em;
+	padding: 0.8em 0.4em 0.8em 0.4em;
+	width: 50%;
+	font-size: 0.8em;
+}
+td.suburb_column {
+	width: 30%;
+	font-size: 0.7em;
+}
+td.rating_column {
+	width: 20%;
+	font-size: 0.7em;
+}
+/* Column headers for results table */
+td.name_column_head {
+	font-weight: bold;
+	font-size: 1em;
+	width: 50%;
+}
+td.suburb_column_head {
+	font-weight: bold;
+	font-size: 1em;
+	width: 30%;
+}
+td.rating_column_head {
+	font-weight: bold;
+	font-size: 1em;
+	width: 20%;
+}
+/* END: RIGHT content area */
+
+/* Standard Table layout across website */
+table {
+	border-collapse: collapse;
+	margin: 4% 0 4% 0;
+	width: 100%; 
+}
+th {
+	font-size: 0.8em;
+	border: 1px solid black;
+}
+td {
+	padding: 0.1em;
+	font-size: 0.8em;
+	text-align: center;
+	border: 1px solid black;
+}
+/* END: MAIN CONTENT */
+
+/* START: FOOTER */
+#footer {
+	height: 110px;
+	width: 100%;
+	background-image: url(../images/footerbg.png);
+}
+
+/* Structures all link lists in the footer. */
+#footer_links {
+	height: 90px;
+	padding-left: 5%;
+	color: #FFF;
+}
+#footer_links h4 {
+	padding-bottom: 1%;
+}
+
+/* Hide quick nav on Mobile */
+#quick_nav {
+	display: none;
+}
+
+/* Social links are the bottom links on the page, i.e. Facebook, Twitter. */
+#social_links {
+	height: 25px;
+	padding-top: 20px;
+}
+#social_links ul {
+	list-style: none;
+	overflow: hidden;
+}
+#social_links ul li {
+	width: 14%;
+	float: left;
+	padding: 1% 0; 
+	margin-left: 6%;
+}
+#social_links ul a {
+	color: transparent;
+}
+#social_links img {
+	height: 5%;
+	width: 35%;
+}
+#copyright {
+	text-align: center;
+	font-size: 0.7em;
+}
+/* END: FOOTER */
